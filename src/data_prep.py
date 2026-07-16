@@ -20,7 +20,7 @@ def preprocess_data(df):
     """Clean and preprocess data"""
     print("Starting data preprocessing...")
     
-    df = df.fillna(method='ffill')
+    df = df.ffill()
     
     df['Date'] = pd.to_datetime(df['Date'], dayfirst=True)
     df.set_index('Date', inplace=True)
