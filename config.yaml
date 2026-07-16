@@ -1,0 +1,31 @@
+data:
+  raw_path: "data/raw/ftse.csv"
+  processed_path: "data/processed/ftse_processed.csv"
+
+models:
+  kmeans_path: "models/kmeans_model.pkl"
+  dbscan_path: "models/dbscan_model.pkl"
+  isolation_forest_path: "models/isolation_forest_model.pkl"
+  pca_path: "models/pca_model.pkl"
+  scaler_path: "models/scaler_model.pkl"
+
+training:
+  random_state: 42
+  contamination: 0.05
+  pca_components: 2
+  kmeans_range: [2, 7]
+  dbscan_eps: [0.5, 1.0, 1.5]
+  dbscan_min_samples: [3, 5, 7]
+
+features:
+  - Open
+  - High
+  - Low
+  - Close
+  - Volume
+  - Return
+  - Range
+
+app:
+  title: "FTSE Market Analysis"
+  description: "Unsupervised Learning for Stock Market Pattern Detection"
